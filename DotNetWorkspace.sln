@@ -7,9 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{42C6F50F-8DC
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EFCore", "EFCore", "{17800143-C128-4D04-9E72-88AE73B7D380}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetWorkspace.EFCore.Model", "src\EFCore\DotNetWorkspace.EFCore.Model\DotNetWorkspace.EFCore.Model.csproj", "{3F0EA33F-8802-455A-B0E7-36768BA4AF31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetWorkspace.EFCore.Model", "src\EFCore\DotNetWorkspace.EFCore.Model\DotNetWorkspace.EFCore.Model.csproj", "{3F0EA33F-8802-455A-B0E7-36768BA4AF31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetWorkspace.EFCore.DataAccess", "src\EFCore\DotNetWorkspace.EFCore.DataAccess\DotNetWorkspace.EFCore.DataAccess.csproj", "{DDFB4EE2-4BDF-4A76-B93D-EAEF1A33D909}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetWorkspace.EFCore.DataAccess", "src\EFCore\DotNetWorkspace.EFCore.DataAccess\DotNetWorkspace.EFCore.DataAccess.csproj", "{DDFB4EE2-4BDF-4A76-B93D-EAEF1A33D909}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

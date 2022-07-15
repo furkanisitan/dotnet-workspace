@@ -14,4 +14,8 @@
     <ProjectReference Include="..\DotNetWorkspace.EFCore.Model\DotNetWorkspace.EFCore.Model.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Configurations\" />
+  </ItemGroup>
+
 </Project>

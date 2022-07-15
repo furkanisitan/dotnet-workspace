@@ -1,7 +1,16 @@
 ﻿namespace DotNetWorkspace.EFCore.Model;
 
-public class Order : Entity<int>
+public class Order : IEntity<int>, IEntityDate
 {
+    #region IEntity
+    public int Id { get; set; }
+    #endregion
+
+    #region IEntityDate
+    public DateTime CreatedDate { get; set; }
+    public DateTime? UpdatedDate { get; set; }
+    #endregion
+
     public decimal TotalPrice { get; set; }
     public string Address { get; set; } = null!;
 
@@ -17,4 +26,5 @@ public class Order : Entity<int>
     #region Product - Many to Many Relationship
     public virtual ICollection<Product>? Products { get; set; }
     #endregion
+
 }
