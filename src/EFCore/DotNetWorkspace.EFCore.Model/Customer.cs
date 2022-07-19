@@ -6,8 +6,7 @@ public class Customer : IEntity<int>
     public int Id { get; set; }
     #endregion
 
-    public string FirstName { get; set; } = default!;
-    public string LastName { get; set; } = default!;
+    public Person Person { get; set; } = new();
 
     #region Order - One to Many Relationship
     public virtual ICollection<Order>? Orders { get; set; }

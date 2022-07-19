@@ -24,12 +24,16 @@ internal class CustomerConfiguration : EntityConfiguration<Customer, int>
         // @see https://docs.microsoft.com/en-us/ef/core/modeling/entity-properties?tabs=data-annotations%2Cwithout-nrt#column-names
         builder.Property(x => x.Id).HasColumnName("CustomerId");
 
-        // If nullable reference types are enabled, properties will be configured based on the C# nullability of their .NET type: string? will be configured as optional, but string will be configured as required.
-        // @see https://docs.microsoft.com/en-us/ef/core/modeling/entity-properties?tabs=data-annotations%2Cwithout-nrt#required-and-optional-properties
-        //builder.Property(x => x.FirstName).IsRequired();
-
-        // @see https://docs.microsoft.com/en-us/ef/core/modeling/entity-properties?tabs=fluent-api%2Cwithout-nrt#maximum-length
-        builder.Property(x => x.LastName).HasMaxLength(100);
+        // Owned Entity
+        // @see https://docs.microsoft.com/en-us/ef/core/modeling/owned-entities
+        builder.OwnsOne(c => c.Person, p =>
+            {
+                // If nullable reference types are enabled, properties will be configured based on the C# nullability of their .NET type: string? will be configured as optional, but string will be configured as required.
+                // @see https://docs.microsoft.com/en-us/ef/core/modeling/entity-properties?tabs=data-annotations%2Cwithout-nrt#required-and-optional-properties
+                p.Property(x=>x.FirstName).HasColumnName(nameof(Person.FirstName)).IsRequired();
+                // @see https://docs.microsoft.com/en-us/ef/core/modeling/entity-properties?tabs=fluent-api%2Cwithout-nrt#maximum-length
+                p.Property(x => x.LastName).HasColumnName(nameof(Person.LastName)).HasMaxLength(100);
+            });
 
         // One to Many Relationship
         // @see https://docs.microsoft.com/en-us/ef/core/modeling/relationships?tabs=fluent-api%2Cfluent-api-simple-key%2Csimple-key
