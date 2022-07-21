@@ -10,6 +10,7 @@ public class ApplicationDbContext : DbContext
     public DbSet<Order> Orders => Set<Order>();
     public DbSet<Payment> Payments => Set<Payment>();
     public DbSet<Product> Products => Set<Product>();
+    public DbSet<City> Cities => Set<City>();
 
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)
