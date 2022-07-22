@@ -24,6 +24,10 @@ internal class CustomerConfiguration : EntityConfiguration<Customer, int>
         // @see https://docs.microsoft.com/en-us/ef/core/modeling/entity-properties?tabs=data-annotations%2Cwithout-nrt#column-names
         builder.Property(x => x.Id).HasColumnName("CustomerId");
 
+        // Indexes
+        // @see https://docs.microsoft.com/en-us/ef/core/modeling/indexes?tabs=data-annotations
+        builder.HasIndex(x => x.Username).HasDatabaseName("UX_Customers_Username").IsUnique();
+
         // Owned Entity
         // @see https://docs.microsoft.com/en-us/ef/core/modeling/owned-entities
         builder.OwnsOne(c => c.Person, p =>
