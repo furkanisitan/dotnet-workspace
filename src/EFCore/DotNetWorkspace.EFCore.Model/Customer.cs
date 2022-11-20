@@ -1,4 +1,7 @@
-﻿namespace DotNetWorkspace.EFCore.Model;
+﻿using DotNetWorkspace.EFCore.Model.Common;
+using System.Collections.ObjectModel;
+
+namespace DotNetWorkspace.EFCore.Model;
 
 public class Customer : IEntity<int>
 {
@@ -11,7 +14,7 @@ public class Customer : IEntity<int>
     public Person Person { get; set; } = new();
 
     #region Order - One to Many Relationship
-    public virtual ICollection<Order>? Orders { get; set; }
+    public ICollection<Order> Orders { get; set; } = new Collection<Order>();
     #endregion
 
 }

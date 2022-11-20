@@ -1,4 +1,6 @@
-﻿namespace DotNetWorkspace.EFCore.Model
+﻿using DotNetWorkspace.EFCore.Model.Common;
+
+namespace DotNetWorkspace.EFCore.Model
 {
     public class Person : IOwnedEntity
     {

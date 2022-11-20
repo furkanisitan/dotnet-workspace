@@ -1,4 +1,6 @@
-﻿namespace DotNetWorkspace.EFCore.Model;
+﻿using DotNetWorkspace.EFCore.Model.Common;
+
+namespace DotNetWorkspace.EFCore.Model;
 
 public class Payment : IEntity<int>, IEntityDate
 {
@@ -17,7 +19,7 @@ public class Payment : IEntity<int>, IEntityDate
 
     #region Order - One to One Relationship
     //public int OrderId { get; set; }
-    public Order Order { get; set; } = null!;
+    public Order Order { get; set; } = default!;
     #endregion
 
 }

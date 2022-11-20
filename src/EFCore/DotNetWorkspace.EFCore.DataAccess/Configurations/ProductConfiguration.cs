@@ -1,4 +1,5 @@
-﻿using DotNetWorkspace.EFCore.Model;
+﻿using DotNetWorkspace.EFCore.DataAccess.Configurations.Common;
+using DotNetWorkspace.EFCore.Model;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -6,6 +7,8 @@ namespace DotNetWorkspace.EFCore.DataAccess.Configurations;
 
 internal class ProductConfiguration : EntityConfiguration<Product, int>
 {
+    public override string TableName => "Products";
+
     public override void Configure(EntityTypeBuilder<Product> builder)
     {
         base.Configure(builder);
