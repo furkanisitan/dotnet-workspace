@@ -1,4 +1,4 @@
-﻿namespace DotNetWorkspace.EFCore.Model.Common;
+﻿namespace DotNetWorkspace.Entities;
 
 public interface IEntity<TKey>
     where TKey : IEquatable<TKey>

@@ -1,4 +1,4 @@
-﻿using DotNetWorkspace.EFCore.Model.Common;
+﻿using DotNetWorkspace.Entities;
 using System.Collections.ObjectModel;
 
 namespace DotNetWorkspace.EFCore.Model;

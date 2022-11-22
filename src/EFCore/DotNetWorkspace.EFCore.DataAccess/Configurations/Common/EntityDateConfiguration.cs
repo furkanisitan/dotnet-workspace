@@ -1,4 +1,4 @@
-﻿using DotNetWorkspace.EFCore.Model.Common;
+﻿using DotNetWorkspace.Entities;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace DotNetWorkspace.EFCore.DataAccess.Configurations.Common;
