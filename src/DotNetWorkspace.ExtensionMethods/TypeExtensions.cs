@@ -1,25 +1,26 @@
 ﻿namespace DotNetWorkspace.ExtensionMethods
 {
     /// <summary>
-    /// This class contains extension methods for the <see cref="Type"/>.
+    /// Extension methods for <see cref="Type"/>.
     /// </summary>
     public static class TypeExtensions
     {
         /// <summary>
-        /// Determines whether the current type can be assigned to a variable of the specified <paramref name="genericType"/>.
+        /// Determines whether the current type can be assigned to a variable of the specified <paramref name="targetType"/>. <br/>
+        /// The specified <paramref name="targetType"/> can be a generic type.
         /// </summary>
         /// <param name="type"></param>
-        /// <param name="genericType">The generic type to compare with the current type.</param>
-        /// <returns><see langword="true"/> if the current type can be assigned to the <paramref name="genericType"/>, otherwise <see langword="false"/>.</returns>
-        public static bool IsAssignableToGenericType(this Type type, Type? genericType)
+        /// <param name="targetType">The type to compare with the current type.</param>
+        /// <returns><see langword="true"/> if the current type can be assigned to the specified <paramref name="targetType"/>, otherwise <see langword="false"/>.</returns>
+        public static bool IsAssignableToGenericType(this Type type, Type? targetType)
         {
-            if (genericType is null)
+            if (targetType is null)
                 return false;
 
-            return type.IsAssignableTo(genericType) ||
-                   type.IsGenericType && type.GetGenericTypeDefinition() == genericType ||
-                   type.GetInterfaces().Where(x => x.IsGenericType).Any(x => x.GetGenericTypeDefinition() == genericType) ||
-                   type.BaseType is not null && type.BaseType.IsAssignableToGenericType(genericType);
+            return type.IsAssignableTo(targetType) ||
+                   type.IsGenericType && type.GetGenericTypeDefinition() == targetType ||
+                   type.GetInterfaces().Where(x => x.IsGenericType).Any(x => x.GetGenericTypeDefinition() == targetType) ||
+                   type.BaseType is not null && type.BaseType.IsAssignableToGenericType(targetType);
         }
 
     }
