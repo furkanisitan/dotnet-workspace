@@ -1,0 +1,19 @@
+﻿<Window x:Class="DotNetWorkspace.ConfigureAwait.WPFApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Configure Await" Height="450" Width="800"
+        Name="Window">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Button Name="BtnUi" Click="BtnUi_Click" Width="150" Height="50" Grid.Column="0">Change Color - UI</Button>
+        <Button Name="BtnLibrary" Click="BtnLibrary_Click" Width="150" Height="50" Grid.Column="1">Change Color - Library</Button>
+
+    </Grid>
+</Window>
