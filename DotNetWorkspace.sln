@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetWorkspace.ConfigureAw
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetWorkspace.ConfigureAwait.Library", "src\ConfigureAwait\DotNetWorkspace.ConfigureAwait.Library\DotNetWorkspace.ConfigureAwait.Library.csproj", "{5ACF3F1C-D488-4BB9-B9FF-F9C5CABDA366}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetWorkspace.EventHandling", "src\DotNetWorkspace.EventHandling\DotNetWorkspace.EventHandling.csproj", "{E3E61D99-BB78-4B15-B815-9AC26F126EAC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{5ACF3F1C-D488-4BB9-B9FF-F9C5CABDA366}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5ACF3F1C-D488-4BB9-B9FF-F9C5CABDA366}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5ACF3F1C-D488-4BB9-B9FF-F9C5CABDA366}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3E61D99-BB78-4B15-B815-9AC26F126EAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3E61D99-BB78-4B15-B815-9AC26F126EAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3E61D99-BB78-4B15-B815-9AC26F126EAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3E61D99-BB78-4B15-B815-9AC26F126EAC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +70,7 @@ Global
 		{777705A6-BE25-45E3-843D-84B82048075F} = {42C6F50F-8DCE-4CA8-99A8-14E089B0621A}
 		{784A443F-D5A8-4725-A097-A5AD753CF397} = {777705A6-BE25-45E3-843D-84B82048075F}
 		{5ACF3F1C-D488-4BB9-B9FF-F9C5CABDA366} = {777705A6-BE25-45E3-843D-84B82048075F}
+		{E3E61D99-BB78-4B15-B815-9AC26F126EAC} = {42C6F50F-8DCE-4CA8-99A8-14E089B0621A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D075B45E-1C6D-4765-BA68-68BEC2F917D8}
