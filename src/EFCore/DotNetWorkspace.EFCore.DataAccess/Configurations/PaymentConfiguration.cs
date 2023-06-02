@@ -26,7 +26,8 @@ internal class PaymentConfiguration : EntityDateConfiguration<Payment, int>
             // Check Constraints
             // @see https://docs.microsoft.com/en-us/ef/core/modeling/indexes?tabs=fluent-api#check-constraints
             // @see https://github.com/efcore/EFCore.CheckConstraints#enum-constraints
-            x.HasCheckConstraint("CK_Payments_Status_Enum", $"{_sqlGenerationHelper.DelimitIdentifier("Status")} IN (0, 1, 2, 3, 4)");
+            x.HasCheckConstraint("CK_Payments_Status_Enum",
+                $"{_sqlGenerationHelper.DelimitIdentifier("Status")} IN (0, 1, 2, 3, 4)");
         });
 
         builder.Property(x => x.CardNumber).HasMaxLength(20);

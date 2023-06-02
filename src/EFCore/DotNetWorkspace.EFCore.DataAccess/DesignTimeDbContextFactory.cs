@@ -2,15 +2,14 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 
-namespace DotNetWorkspace.EFCore.DataAccess
+namespace DotNetWorkspace.EFCore.DataAccess;
+
+public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<ApplicationDbContext>
 {
-    public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<ApplicationDbContext>
+    public ApplicationDbContext CreateDbContext(string[] args)
     {
-        public ApplicationDbContext CreateDbContext(string[] args)
-        {
-            var dbContextOptionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
-            dbContextOptionsBuilder.UseNpgsql(Configuration.ConnectionString);
-            return new(dbContextOptionsBuilder.Options);
-        }
+        var dbContextOptionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
+        dbContextOptionsBuilder.UseNpgsql(Configuration.ConnectionString);
+        return new ApplicationDbContext(dbContextOptionsBuilder.Options);
     }
 }

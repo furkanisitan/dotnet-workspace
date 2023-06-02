@@ -1,4 +1,4 @@
-﻿using DotNetWorkspace.Entities;
+﻿using DotNetWorkspace.EFCore.Model;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -28,6 +28,4 @@ internal abstract class EntityConfiguration<TEntity, TKey> : IEntityTypeConfigur
         // @see https://docs.microsoft.com/en-us/ef/core/modeling/entity-properties?tabs=data-annotations%2Cwithout-nrt#column-names
         builder.Property(x => x.Id).HasColumnName($"{IdColumnName}");
     }
-
 }
-

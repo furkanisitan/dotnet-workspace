@@ -1,11 +1,11 @@
-﻿using DotNetWorkspace.Entities;
+﻿using DotNetWorkspace.EFCore.Model;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace DotNetWorkspace.EFCore.DataAccess.Configurations.Common;
 
 internal abstract class EntityDateConfiguration<TEntity, TKey> : EntityConfiguration<TEntity, TKey>
-        where TEntity : class, IEntity<TKey>, IEntityDate
-        where TKey : IEquatable<TKey>
+    where TEntity : class, IEntity<TKey>, IEntityDate
+    where TKey : IEquatable<TKey>
 {
     public override void Configure(EntityTypeBuilder<TEntity> builder)
     {

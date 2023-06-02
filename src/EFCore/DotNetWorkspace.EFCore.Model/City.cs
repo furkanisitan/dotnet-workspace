@@ -1,11 +1,8 @@
-﻿using DotNetWorkspace.Entities;
+﻿namespace DotNetWorkspace.EFCore.Model;
 
-namespace DotNetWorkspace.EFCore.Model
+public class City : IKeylessEntity
 {
-    public class City : IKeylessEntity
-    {
-        public string Name { get; set; } = default!;
+    public string Name { get; set; } = default!;
 
-        public short Plate { get; set; }
-    }
+    public short Plate { get; set; }
 }

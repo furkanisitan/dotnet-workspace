@@ -22,7 +22,8 @@ internal class OrderConfiguration : EntityDateConfiguration<Order, int>
 
         // One to One Relationship - Same PK and FK
         // @see https://docs.microsoft.com/en-us/ef/core/modeling/relationships?tabs=fluent-api%2Cfluent-api-simple-key%2Csimple-key
-        builder.HasOne(o => o.Payment).WithOne(p => p.Order).HasForeignKey<Payment>(p => p.Id).HasConstraintName("FK_Payments_Orders_Id")
+        builder.HasOne(o => o.Payment).WithOne(p => p.Order).HasForeignKey<Payment>(p => p.Id)
+            .HasConstraintName("FK_Payments_Orders_Id")
             // @see https://docs.microsoft.com/en-us/ef/core/modeling/relationships?tabs=fluent-api%2Cfluent-api-simple-key%2Csimple-key#cascade-delete
             .OnDelete(DeleteBehavior.Cascade);
 

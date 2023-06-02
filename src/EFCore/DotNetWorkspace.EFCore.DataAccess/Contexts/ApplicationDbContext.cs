@@ -14,5 +14,4 @@ public class ApplicationDbContext : BaseDbContext
     public DbSet<Payment> Payments => Set<Payment>();
     public DbSet<Product> Products => Set<Product>();
     public DbSet<City> Cities => Set<City>();
-
 }

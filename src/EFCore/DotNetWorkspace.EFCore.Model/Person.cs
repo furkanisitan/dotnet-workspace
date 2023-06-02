@@ -1,10 +1,7 @@
-﻿using DotNetWorkspace.Entities;
+﻿namespace DotNetWorkspace.EFCore.Model;
 
-namespace DotNetWorkspace.EFCore.Model
+public class Person : IOwnedEntity
 {
-    public class Person : IOwnedEntity
-    {
-        public string FirstName { get; set; } = default!;
-        public string LastName { get; set; } = default!;
-    }
+    public string FirstName { get; set; } = default!;
+    public string LastName { get; set; } = default!;
 }
