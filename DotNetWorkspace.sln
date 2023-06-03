@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetWorkspace.ConfigureAw
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetWorkspace.EventHandling", "src\DotNetWorkspace.EventHandling\DotNetWorkspace.EventHandling.csproj", "{E3E61D99-BB78-4B15-B815-9AC26F126EAC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RuleEngine", "RuleEngine", "{89D76BFC-4FA4-48FB-B946-D6BC9DE03FD0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,6 +66,7 @@ Global
 		{784A443F-D5A8-4725-A097-A5AD753CF397} = {777705A6-BE25-45E3-843D-84B82048075F}
 		{5ACF3F1C-D488-4BB9-B9FF-F9C5CABDA366} = {777705A6-BE25-45E3-843D-84B82048075F}
 		{E3E61D99-BB78-4B15-B815-9AC26F126EAC} = {42C6F50F-8DCE-4CA8-99A8-14E089B0621A}
+		{89D76BFC-4FA4-48FB-B946-D6BC9DE03FD0} = {42C6F50F-8DCE-4CA8-99A8-14E089B0621A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D075B45E-1C6D-4765-BA68-68BEC2F917D8}
