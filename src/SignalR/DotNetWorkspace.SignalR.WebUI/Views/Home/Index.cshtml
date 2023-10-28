@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row p-1">
+        <div class="col-2 col-md-1">User</div>
+        <div class="col-10 col-md-5">
+            <input type="text" id="userInput"/>
+        </div>
+    </div>
+    <div class="row p-1">
+        <div class="col-2 col-md-1">Message</div>
+        <div class="col-10 col-md-5">
+            <input type="text" class="w-100" id="messageInput"/>
+        </div>
+    </div>
+    <div class="row p-1">
+        <div class="col-6 col-md-3" id="status">
+            <div id="connecting" class="spinner-border spinner-border-sm text-primary mb-1" role="status" title="Connecting...">
+                <span class="visually-hidden">Connecting...</span>
+            </div>
+        </div>
+        <div class="col-6 col-md-3 text-end">
+            <input type="button" id="sendButton" value="Send Message" disabled="disabled"/>
+        </div>
+    </div>
+    <div class="row p-1">
+        <div class="col-12 col-md-6">
+            <hr/>
+        </div>
+    </div>
+    <div class="row p-1">
+        <div class="col-12 col-md-6">
+            <ul id="messageList"></ul>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script src="~/lib/microsoft/signalr/dist/browser/signalr.min.js"></script>
+    <script src="~/js/chat.js"></script>
+}
