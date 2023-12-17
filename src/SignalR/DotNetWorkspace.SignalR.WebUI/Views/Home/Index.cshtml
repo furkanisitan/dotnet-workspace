@@ -3,42 +3,55 @@
 }
 
 <div class="container">
-    <div class="row p-1">
-        <div class="col-2 col-md-1">User</div>
-        <div class="col-10 col-md-5">
-            <input type="text" id="userInput"/>
-        </div>
-    </div>
-    <div class="row p-1">
-        <div class="col-2 col-md-1">Message</div>
-        <div class="col-10 col-md-5">
-            <input type="text" class="w-100" id="messageInput"/>
-        </div>
-    </div>
-    <div class="row p-1">
-        <div class="col-6 col-md-3" id="status">
-            <div id="connecting" class="spinner-border spinner-border-sm text-primary mb-1" role="status" title="Connecting...">
-                <span class="visually-hidden">Connecting...</span>
+    <div class="col-12 col-sm-10 col-md-8 col-lg-6 offset-sm-1 offset-md-2 offset-lg-3">
+        <div class="row p-1">
+            <div class="col-12 col-sm-2">User</div>
+            <div class="col-12 col-sm-10">
+                <input type="text" class="w-100" id="userInput" />
             </div>
         </div>
-        <div class="col-6 col-md-3 text-end">
-            <input type="button" id="sendButton" value="Send Message" disabled="disabled"/>
+        <div class="row p-1">
+            <div class="col-12 col-sm-2">Message</div>
+            <div class="col-12 col-sm-10">
+                <input type="text" class="w-100" id="messageInput" />
+            </div>
         </div>
-    </div>
-    <div class="row p-1">
-        <div class="col-12 col-md-6">
-            <hr/>
+        <div class="row p-1">
+            <div class="col-2">
+                <div id="connecting" class="spinner-border spinner-border-sm text-primary mb-1" role="status" title="Connecting...">
+                    <span class="visually-hidden">Connecting...</span>
+                </div>
+            </div>
+            <div class="col-10 text-end">
+                <input type="button" id="sendButton" value="Send Message" disabled="disabled" />
+            </div>
         </div>
-    </div>
-    <div class="row p-1">
-        <div class="col-12 col-md-6">
-            <ul id="messageList"></ul>
+        <div class="row p-1">
+            <div class="col-12">
+                Client Count <span class="badge text-bg-secondary" id="clientCount">0</span>
+            </div>
         </div>
+
+        <div class="row p-1"><div class="col-12"><hr /></div></div>
+
+        <div class="row p-1">
+            <div class="col-12 alert alert-secondary" id="notification">No notification.</div>
+        </div>
+
+        <div class="row p-1"><div class="col-12"><hr /></div></div>
+
+        <div class="row p-1">
+            <div class="col-12">
+                <ul id="messageList"></ul>
+            </div>
+        </div>
+
+
     </div>
 </div>
 
 @section Scripts
-{
+    {
     <script src="~/lib/microsoft/signalr/dist/browser/signalr.min.js"></script>
     <script src="~/js/chat.js"></script>
 }

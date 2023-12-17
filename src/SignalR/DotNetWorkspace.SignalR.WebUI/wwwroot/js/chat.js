@@ -3,7 +3,7 @@
 // https://learn.microsoft.com/en-us/aspnet/core/signalr/javascript-client?view=aspnetcore-7.0
 
 var connection = new signalR.HubConnectionBuilder()
-    .withUrl("http://localhost:5088/chat-hub", {
+    .withUrl("https://localhost:7102/chat-hub", {
         skipNegotiation: true,
         transport: signalR.HttpTransportType.WebSockets
     })
@@ -11,7 +11,10 @@ var connection = new signalR.HubConnectionBuilder()
     .withAutomaticReconnect([3, 3, 3, 3])
     .build();
 
-connection.on("ReceiveMessage", (user, message) => { addMessage(user, message); });
+connection.on("ReceiveMessage", (username, message) => { addMessage(username, message); });
+connection.on("ReceiveClientCount", (count) => { setClientCount(count); });
+connection.on("Notify", (notification) => { setNotification(notification); });
+connection.on("ReceiveWarning", (message) => { alert(message); });
 connection.onreconnecting(error => { setStatus(); });
 connection.onreconnected(connectionId => { setStatus(); });
 connection.onclose(error => { start(); });
@@ -51,8 +54,16 @@ function setStatus() {
     }
 }
 
-function addMessage(user, message) {
-    $("#messageList").append(`<li>${user} says ${message}</li>`);
+function addMessage(username, message) {
+    $("#messageList").append(`<li>${username} says ${message}</li>`);
+}
+
+function setClientCount(count) {
+    $("#clientCount").text(count);
+}
+
+function setNotification(notification) {
+    $("#notification").html(notification);
 }
 
 start();

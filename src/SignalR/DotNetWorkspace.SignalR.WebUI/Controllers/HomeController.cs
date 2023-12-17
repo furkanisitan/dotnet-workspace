@@ -1,20 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace DotNetWorkspace.SignalR.WebUI.Controllers
+namespace DotNetWorkspace.SignalR.WebUI.Controllers;
+
+public class HomeController : Controller
 {
-    public class HomeController : Controller
+    public IActionResult Index()
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
-        public IActionResult Index()
-        {
-            return View();
-        }
-
+        return View();
     }
 }
