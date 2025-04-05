@@ -4,7 +4,7 @@ internal class ProductRepository
 {
     public delegate void ProductUpdatingEventHandler(object sender, ProductUpdatingEventArgs e);
 
-    private static readonly List<Product> Products = new();
+    private static readonly List<Product> Products = [];
 
     // good
     public event EventHandler<ProductAddingEventArgs>? Adding; // dotnet standard
@@ -13,12 +13,12 @@ internal class ProductRepository
     // bad
     public event ProductUpdatingEventHandler? Updating;
     public event ProductUpdatingEventHandler? Updated;
-       
+
     public Product Add(Product product)
     {
         Adding?.Invoke(this, new ProductAddingEventArgs(product));
 
-        product.Id = Products.Any() ? Products.Max(x => x.Id) + 1 : 1;
+        product.Id = Products.Count == 0 ? 1 : Products.Max(x => x.Id) + 1;
         Products.Add(product);
 
         Added?.Invoke(this, new ProductAddingEventArgs(product));

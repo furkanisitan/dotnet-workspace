@@ -1,11 +1,6 @@
 ﻿namespace DotNetWorkspace.EventHandling;
 
-internal struct ProductAddingEventArgs
+internal struct ProductAddingEventArgs(Product product)
 {
-    public ProductAddingEventArgs(Product product)
-    {
-        Product = product;
-    }
-
-    public Product Product { get; set; }
+    public Product Product { get; set; } = product;
 }

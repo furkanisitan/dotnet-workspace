@@ -1,11 +1,6 @@
 ﻿namespace DotNetWorkspace.EventHandling;
 
-internal class ProductUpdatingEventArgs : EventArgs
+internal class ProductUpdatingEventArgs(Product product) : EventArgs
 {
-    public ProductUpdatingEventArgs(Product product)
-    {
-        Product = product;
-    }
-
-    public Product Product { get; set; }
+    public Product Product { get; set; } = product;
 }
