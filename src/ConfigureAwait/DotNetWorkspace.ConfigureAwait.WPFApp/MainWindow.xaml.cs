@@ -1,6 +1,4 @@
-﻿using System;
-using System.Diagnostics;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 using System.Windows;
 using System.Windows.Media;
 using DotNetWorkspace.ConfigureAwait.Library;
@@ -19,29 +17,43 @@ public partial class MainWindow : Window
 
     private async void BtnUi_Click(object sender, RoutedEventArgs e)
     {
-        // Main thread
-        Debug.WriteLine("Before WaitAsync");
+        try
+        {
+            // Main thread
+            Debug.WriteLine("Before WaitAsync");
 
-        // Worker thread
-        await WaitAsync().ConfigureAwait(true); // default
-        //await WaitAsync().ConfigureAwait(false);
+            // Worker thread
+            await WaitAsync().ConfigureAwait(true); // default
+            //await WaitAsync().ConfigureAwait(false);
 
-        // Continuation task (Which thread?)
-        Debug.WriteLine("After WaitAsync");
-        Window.Background = GetRandomColor();
+            // Continuation task (Which thread?)
+            Debug.WriteLine("After WaitAsync");
+            Window.Background = GetRandomColor();
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine($"Exception: {ex.Message}");
+        }
     }
 
     private async void BtnLibrary_Click(object sender, RoutedEventArgs e)
     {
-        // Main thread
-        Debug.WriteLine("Before SleepAsync");
+        try
+        {
+            // Main thread
+            Debug.WriteLine("Before SleepAsync");
 
-        // Worker thread
-        await Sleeper.SleepAsync(); // recommended
-        //Sleeper.SleepAsync().Wait(); // not recommended
+            // Worker thread
+            await Sleeper.SleepAsync(); // recommended
+            //Sleeper.SleepAsync().Wait(); // not recommended
 
-        Debug.WriteLine("After SleepAsync");
-        Window.Background = GetRandomColor();
+            Debug.WriteLine("After SleepAsync");
+            Window.Background = GetRandomColor();
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine($"Exception: {ex.Message}");
+        }
     }
 
     private static async Task WaitAsync()
