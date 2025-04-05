@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.SignalR;
 
-namespace DotNetWorkspace.SignalR.WebAPI.Hubs;
+namespace DotNetWorkspace.SignalR.Server.Hubs;
 
 public class ChatHub : Hub
 {
-    private static readonly Dictionary<string, string> UserConnectionMap = new();
+    private static readonly Dictionary<string, string> UserConnectionMap = [];
     private static int _clientCount;
 
     public async Task SendMessage(string username, string message)
@@ -56,6 +56,6 @@ public class ChatHub : Hub
 
     private static string? GetConnectionIdByUsername(string username)
     {
-        return UserConnectionMap.TryGetValue(username, out var connectionId) ? connectionId : null;
+        return UserConnectionMap.GetValueOrDefault(username);
     }
 }

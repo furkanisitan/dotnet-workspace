@@ -3,7 +3,7 @@
 // https://learn.microsoft.com/en-us/aspnet/core/signalr/javascript-client?view=aspnetcore-7.0
 
 var connection = new signalR.HubConnectionBuilder()
-    .withUrl("https://localhost:7102/chat-hub", {
+    .withUrl("https://localhost:7230/chat-hub", {
         skipNegotiation: true,
         transport: signalR.HttpTransportType.WebSockets
     })
