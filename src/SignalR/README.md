@@ -75,8 +75,6 @@ This repository demonstrates a basic SignalR implementation using two separate A
 
 ## 4. Test the Application
 
-### 4. Test the Application
-
 1. Open your browser and navigate to the Web UI (e.g., `https://localhost:7240`).
 2. The app will attempt to connect to the SignalR server. Once connected, you'll see the UI for real-time messaging.
 3. To **test real-time messaging**, open **multiple browser windows** or **use different browsers** (e.g., Chrome, Edge, Firefox, etc.). Each window represents a separate client session.
