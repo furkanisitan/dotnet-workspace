@@ -6,7 +6,7 @@ This repository contains sample code that supports the topics discussed in the M
 
 The article explains the differences between using `.ConfigureAwait(true)` and `.ConfigureAwait(false)`, and demonstrates with examples in which scenarios each value should be preferred. This repository contains runnable samples related to those scenarios.
 
-## 📁 Contents
+## 📚  Contents
 
 This project demonstrates the following scenarios:
 

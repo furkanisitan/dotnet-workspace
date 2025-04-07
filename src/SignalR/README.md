@@ -7,7 +7,9 @@ This repository demonstrates a basic SignalR implementation using two separate A
 
 ---
 
-## 1. Clone the Repository
+## 🛠️ Getting Started
+
+### 📥 1. Clone the Repository
 
 1. Clone the repository to your local machine:
    ```bash
@@ -21,7 +23,7 @@ This repository demonstrates a basic SignalR implementation using two separate A
 
 ---
 
-## 2. Run the Server Project
+### 🖥️ 2. Run the Server Project
 
 1. Navigate to the Server project:
    ```bash
@@ -47,7 +49,7 @@ This repository demonstrates a basic SignalR implementation using two separate A
 
 ---
 
-## 3. Run the Web UI (Client) Project
+### 🌐 3. Run the Web UI (Client) Project
 
 1. Open a **new terminal window**, then navigate to the Web UI project:
    ```bash
@@ -73,14 +75,13 @@ This repository demonstrates a basic SignalR implementation using two separate A
 
 ---
 
-## 4. Test the Application
+### 🚀 4. Test the Application
 
 1. Open your browser and navigate to the Web UI (e.g., `https://localhost:7240`).
 2. The app will attempt to connect to the SignalR server. Once connected, you'll see the UI for real-time messaging.
 3. To **test real-time messaging**, open **multiple browser windows** or **use different browsers** (e.g., Chrome, Edge, Firefox, etc.). Each window represents a separate client session.
 4. In one of the browser windows, send a message. You will see the message appear in **all other connected client windows** in real-time, without needing to refresh the pages.
 5. This demonstrates SignalR's real-time capabilities, where multiple clients can interact simultaneously. Try typing different messages in each window and see how they appear across all open sessions.
-
 
 ---
 
