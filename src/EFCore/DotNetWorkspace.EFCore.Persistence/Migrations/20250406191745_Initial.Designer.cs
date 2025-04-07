@@ -70,7 +70,7 @@ namespace DotNetWorkspace.EFCore.Persistence.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("OrderProduct", (string)null);
+                    b.ToTable("OrderProducts", (string)null);
                 });
 
             modelBuilder.Entity("DotNetWorkspace.EFCore.Persistence.Entities.Order", b =>
@@ -126,12 +126,12 @@ namespace DotNetWorkspace.EFCore.Persistence.Migrations
                         .HasColumnType("smallint");
 
                     b.HasKey("Id")
-                        .HasName("PK_Paymentsxxx_PaymentId");
+                        .HasName("PK_Payments_PaymentId");
 
                     b.HasIndex("OrderId")
                         .IsUnique();
 
-                    b.ToTable("Paymentsxxx", null, t =>
+                    b.ToTable("Payments", null, t =>
                         {
                             t.HasCheckConstraint("CK_Payments_Status_Enum", "[Status] IN (0, 1, 2, 3, 4)");
                         });

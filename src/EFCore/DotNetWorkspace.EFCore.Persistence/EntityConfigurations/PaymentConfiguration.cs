@@ -6,7 +6,7 @@ namespace DotNetWorkspace.EFCore.Persistence.EntityConfigurations;
 
 internal class PaymentConfiguration : IEntityTypeConfiguration<Payment>
 {
-    private const string TableName = "Paymentsxxx";
+    private const string TableName = "Payments";
     private const string PkColumnName = "PaymentId";
 
     public void Configure(EntityTypeBuilder<Payment> builder)

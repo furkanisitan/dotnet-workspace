@@ -21,7 +21,7 @@ internal static class OrderProductEntityConfiguration
 
     public static Action<EntityTypeBuilder<OrderProduct>> Join = x =>
     {
-        x.ToTable("OrderProduct");
+        x.ToTable("OrderProducts");
         x.HasKey(op => new { op.OrderId, op.ProductId });
     };
 }

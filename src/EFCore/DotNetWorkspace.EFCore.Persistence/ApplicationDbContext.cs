@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using DotNetWorkspace.EFCore.Persistence.Entities;
 using DotNetWorkspace.EFCore.Persistence.Entities.Joins;
+using DotNetWorkspace.EFCore.Persistence.Entities.Views;
 using Microsoft.EntityFrameworkCore;
 
 namespace DotNetWorkspace.EFCore.Persistence;
@@ -12,6 +13,7 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
     public DbSet<Payment> Payments { get; set; }
     public DbSet<Product> Products { get; set; }
     public DbSet<OrderProduct> OrderProducts { get; set; }
+    public DbSet<ProductOrdersCount> ProductOrdersCounts { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

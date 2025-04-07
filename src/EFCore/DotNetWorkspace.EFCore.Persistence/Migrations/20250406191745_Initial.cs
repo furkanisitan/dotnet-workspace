@@ -64,7 +64,7 @@ namespace DotNetWorkspace.EFCore.Persistence.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "OrderProduct",
+                name: "OrderProducts",
                 columns: table => new
                 {
                     OrderId = table.Column<int>(type: "int", nullable: false),
@@ -72,15 +72,15 @@ namespace DotNetWorkspace.EFCore.Persistence.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_OrderProduct", x => new { x.OrderId, x.ProductId });
+                    table.PrimaryKey("PK_OrderProducts", x => new { x.OrderId, x.ProductId });
                     table.ForeignKey(
-                        name: "FK_OrderProduct_Orders_OrderId",
+                        name: "FK_OrderProducts_Orders_OrderId",
                         column: x => x.OrderId,
                         principalTable: "Orders",
                         principalColumn: "OrderId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_OrderProduct_Products_ProductId",
+                        name: "FK_OrderProducts_Products_ProductId",
                         column: x => x.ProductId,
                         principalTable: "Products",
                         principalColumn: "ProductId",
@@ -88,7 +88,7 @@ namespace DotNetWorkspace.EFCore.Persistence.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Paymentsxxx",
+                name: "Payments",
                 columns: table => new
                 {
                     PaymentId = table.Column<int>(type: "int", nullable: false)
@@ -100,10 +100,10 @@ namespace DotNetWorkspace.EFCore.Persistence.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Paymentsxxx_PaymentId", x => x.PaymentId);
+                    table.PrimaryKey("PK_Payments_PaymentId", x => x.PaymentId);
                     table.CheckConstraint("CK_Payments_Status_Enum", "[Status] IN (0, 1, 2, 3, 4)");
                     table.ForeignKey(
-                        name: "FK_Paymentsxxx_Orders_OrderId",
+                        name: "FK_Payments_Orders_OrderId",
                         column: x => x.OrderId,
                         principalTable: "Orders",
                         principalColumn: "OrderId",
@@ -117,8 +117,8 @@ namespace DotNetWorkspace.EFCore.Persistence.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_OrderProduct_ProductId",
-                table: "OrderProduct",
+                name: "IX_OrderProducts_ProductId",
+                table: "OrderProducts",
                 column: "ProductId");
 
             migrationBuilder.CreateIndex(
@@ -127,8 +127,8 @@ namespace DotNetWorkspace.EFCore.Persistence.Migrations
                 column: "CustomerId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Paymentsxxx_OrderId",
-                table: "Paymentsxxx",
+                name: "IX_Payments_OrderId",
+                table: "Payments",
                 column: "OrderId",
                 unique: true);
         }
@@ -137,10 +137,10 @@ namespace DotNetWorkspace.EFCore.Persistence.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "OrderProduct");
+                name: "OrderProducts");
 
             migrationBuilder.DropTable(
-                name: "Paymentsxxx");
+                name: "Payments");
 
             migrationBuilder.DropTable(
                 name: "Products");

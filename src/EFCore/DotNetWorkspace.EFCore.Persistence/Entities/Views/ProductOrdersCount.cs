@@ -8,7 +8,7 @@
 ///     For more information, see
 ///     <see href="https://learn.microsoft.com/en-us/ef/core/modeling/keyless-entity-types">Keyless Entity Types</see>.
 /// </remarks>
-public class ProductOrderCount
+public class ProductOrdersCount
 {
     public int ProductId { get; set; }
     public string ProductName { get; set; } = null!;
