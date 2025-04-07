@@ -2,20 +2,20 @@
 
 This repository contains a collection of .NET sample codes for various use cases.
 
-## ConfigureAwait
+## [ConfigureAwait](src/ConfigureAwait/)
 
-- [Source Code](src/ConfigureAwait/) – Demonstrates the use of `ConfigureAwait` in asynchronous programming to control context capturing.
-- Medium Article: [ConfigureAwait Hangi Değeri (true/false) Almalı?](https://furkanisitan.medium.com/configureawait-hangi-degerleri-almali-a549b453fd53)
+Demonstrates the use of `ConfigureAwait` in asynchronous programming to control context capturing.
 
-## Entity Framework Core
+> Medium Article: [ConfigureAwait Hangi Değeri (true/false) Almalı?](https://furkanisitan.medium.com/configureawait-hangi-degerleri-almali-a549b453fd53)
 
-- [Relationships](src/EFCore/DotNetWorkspace.EFCore.Model) – Demonstrates entity relationships using EF Core.
-- [Fluent API Configurations](src/EFCore/DotNetWorkspace.EFCore.DataAccess/Configurations) – Configurations using Fluent API for EF Core models.
+## [EF Core](src/EFCore/)
 
-## EventHandling
+Demonstrates various Entity Framework Core (EF Core) concepts such as relationships, Fluent API configurations, keyless entities, owned entities, enum usage, and creating views through migrations.
 
-- [Source Code](src/EventHandling/) – Demonstrates event handling patterns and practices in .NET applications.
+## [EventHandling](src/DotNetWorkspace.EventHandling/)
 
-## SignalR
+Demonstrates event handling patterns and practices in .NET applications.
 
-- [Source Code](src/SignalR/) – A demonstration of real-time communication using SignalR in .NET.
+## [SignalR](src/SignalR/)
+
+A demonstration of real-time communication using SignalR in .NET.
