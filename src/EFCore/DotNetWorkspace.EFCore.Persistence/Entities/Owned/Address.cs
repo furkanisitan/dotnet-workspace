@@ -13,4 +13,7 @@ public class Address
     public string City { get; set; } = null!;
     public string Street { get; set; } = null!;
     public string Detail { get; set; } = null!;
+
+    public int OrderId { get; set; }
+    public Order Order { get; set; } = null!;
 }
